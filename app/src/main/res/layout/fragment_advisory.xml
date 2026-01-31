@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightGreen">
+
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGreen"
+        android:layout_marginTop="32dp"
+        app:navigationIcon="@drawable/ic_arrow_back">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Crop Advisory"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:paddingVertical="14dp"/>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Scrollable content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="66dp"
+    android:fillViewport="true"
+    android:paddingBottom="80dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp">
+
+        <!-- Result Heading -->
+        <TextView
+            android:id="@+id/text_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recommended Crop:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:padding="16dp"
+            android:gravity="center" />
+
+        <!-- Nitrogen input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:hint="Nitrogen">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_nitrogen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phosphorus input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Phosphorus">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_phosphorus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Potassium input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Potassium">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_potassium"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Temperature input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Temperature (°C)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_temperature"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Humidity input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Humidity (%)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_humidity"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Soil pH input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Soil pH">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_ph"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Rainfall input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Rainfall (mm)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_rainfall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+    <!-- Fixed Button -->
+<com.google.android.material.button.MaterialButton
+android:id="@+id/button_recommendations"
+android:layout_width="match_parent"
+android:layout_height="56dp"
+android:layout_gravity="bottom"
+android:layout_margin="16dp"
+android:text="Get Recommendations"
+android:textColor="@android:color/white"
+android:backgroundTint="#D32F2F"
+app:cornerRadius="12dp" />
+
+    </FrameLayout>

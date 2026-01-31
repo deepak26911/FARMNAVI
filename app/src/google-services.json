@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "265303873991",
+    "project_id": "farmnavi-b2e94",
+    "storage_bucket": "farmnavi-b2e94.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265303873991:android:31d8907cd302f6c97c21e2",
+        "android_client_info": {
+          "package_name": "com.example.farmnavi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK7dhvbD99r2cRZp5DM6SJ_0q-5qMD2iY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

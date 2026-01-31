@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:background="@color/lightGreen">
+
+    <!-- App Bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/lightGreen"
+        app:navigationIcon="?attr/homeAsUpIndicator" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Plant Diagnosis"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:paddingVertical="15dp"/>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:gravity="center_horizontal">
+
+            <!-- Headline -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capture or Upload an Image"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#19191A"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center"/>
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take a photo or upload an image of the affected plant for an AI-powered diagnosis."
+                android:textColor="#5B5B5B"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"/>
+
+            <!-- Image View for Display -->
+            <ImageView
+                android:id="@+id/capturedImageView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/baseline_upload_24"
+                android:scaleType="centerCrop"
+                android:background="#F1F1F1"
+                android:padding="8dp"
+                android:layout_marginBottom="18dp"
+                android:contentDescription="Captured or uploaded image" />
+
+            <!-- Diagnosis Result Text -->
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result will be shown here..."
+                android:textColor="#D32F2F"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Drag & Drop / Upload Box -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingTop="36dp"
+                android:paddingBottom="36dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:src="@drawable/baseline_upload_24"
+                    android:contentDescription="Upload"
+                    android:layout_marginBottom="14dp"
+                    app:tint="#A6A7AF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Drag &amp; drop your image here or"
+                    android:textColor="#747688"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="18dp"/>
+
+                <!-- Take Photo Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_take_photo"
+                    android:layout_width="230dp"
+                    android:layout_height="48dp"
+                    android:text="Take Photo"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#D32F2F"
+                    app:icon="@drawable/baseline_camera_alt_24"
+                    app:iconPadding="1dp"
+                    app:iconTint="@android:color/white"
+                    app:cornerRadius="16dp"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Upload Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_upload"
+                    android:layout_width="230dp"
+                    android:layout_height="48dp"
+                    android:text="Upload"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:textColor="#151515"
+                    android:backgroundTint="#FAE0E0"
+                    app:icon="@drawable/baseline_upload_file_24"
+                    app:iconPadding="10dp"
+                    app:iconTint="#151515"
+                    app:cornerRadius="16dp"
+                    style="@style/Widget.Material3.Button"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

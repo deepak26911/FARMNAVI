@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#F6F6F6">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:id="@+id/card_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Top Illustration -->
+            <ImageView
+                android:id="@+id/onboarding_illustration"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/onboarding_farmer"
+                android:contentDescription="Farmer illustration" />
+
+            <!-- Welcome Title -->
+
+            <!-- Welcome Subtitle -->
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:paddingTop="20dp"
+                android:paddingBottom="6dp"
+                android:text="Welcome to FarmNavi"
+                android:textAlignment="center"
+                android:textColor="#222C32"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your trusted partner in farming. Let's get you started."
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="#7A848D"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp" />
+
+            <!-- Crop Management Feature -->
+            <LinearLayout
+                android:id="@+id/row_crop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="24dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/icon_crop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/baseline_circle_24"
+                    android:padding="8dp"
+                    android:src="@drawable/agriculture"
+                    android:contentDescription="Crop Management Icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp">
+
+                    <TextView
+                        android:id="@+id/text_crop_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Crop Management"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#222C32"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:id="@+id/text_crop_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get tailored advice on planting, irrigation, and pest control."
+                        android:textSize="15sp"
+                        android:textColor="#7A848D"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Weather Forecast Feature -->
+            <LinearLayout
+                android:id="@+id/row_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="18dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/icon_weather"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/baseline_circle_24"
+                    android:padding="8dp"
+                    android:src="@drawable/weather"
+                    android:contentDescription="Weather Forecast Icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp">
+
+                    <TextView
+                        android:id="@+id/text_weather_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weather Forecasts"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#222C32"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:id="@+id/text_weather_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stay ahead with accurate, real-time weather updates for your location."
+                        android:textSize="15sp"
+                        android:textColor="#7A848D"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Market Prices Feature -->
+            <LinearLayout
+                android:id="@+id/row_market"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="18dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/icon_market"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/baseline_circle_24"
+                    android:padding="8dp"
+                    android:src="@drawable/bar"
+                    android:contentDescription="Market Prices Icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp">
+
+                    <TextView
+                        android:id="@+id/text_market_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Market Prices"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#222C32"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:id="@+id/text_market_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Track current market rates to sell your produce at the best price."
+                        android:textSize="15sp"
+                        android:textColor="#7A848D"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Get Started Button -->
+            <Button
+                android:id="@+id/button_get_started"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Get Started →"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:backgroundTint="#49C352"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
